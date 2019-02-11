@@ -1,0 +1,41 @@
+.site-demo-container
+{
+    border: 1px solid #ebedf0;
+    border-bottom: 1px solid #ffffff;
+
+    padding: 50px 25px;
+    color: rgba(0,0,0,0.65);
+    width: 65%;
+    margin: 25px auto 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-code-container
+{
+    border: 1px solid #ebedf0;
+    border-top: 1px dashed #ebedf0;
+    
+    padding: 50px 25px;
+    color: rgba(0,0,0,0.65);
+    width: 65%;
+    margin: 0 auto 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+{   
+    margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;
+	line-height: 1.7;
+}
+
+.table tr
+{
+	border-bottom: 1px solid #ebedf0;
+}

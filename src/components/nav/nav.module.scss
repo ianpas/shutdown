@@ -1,0 +1,87 @@
+//
+@import "../common/color";
+@import "../common/font";
+
+//
+$navbar-padding-y:              (1rem/4) !default;
+$navbar-padding-x:              1rem !default;
+$navbar-spacing:                1rem !default;
+
+$navlink-padding-y:             (1rem/3) !default;
+$navlink-padding-x:             (1rem/3) !default;
+
+$navlink-color:                 rgba($white, .5) !default;
+$navlink-hover-color:           rgba($white, .75) !default;
+$navlink-active-color:          $white !default;
+
+//
+.nav
+{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    
+    //
+    padding: $navbar-padding-y $navbar-padding-x;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+
+    //
+    display: flex;
+    align-items: center;
+}
+
+.nav-link
+{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    text-decoration: none;
+    
+    color: $navlink-color;
+    font-family: $font-family-base;
+
+    &:not(:disabled)
+    {
+        cursor: pointer;
+    }
+
+    &:focus
+    ,&:hover
+    {
+        color: $navlink-hover-color;
+    }
+
+    &:active
+    {
+        color: $navlink-active-color;
+    }
+}
+
+.nav-link-selected
+{
+    &:focus
+    ,&:hover
+    {
+        color: $navlink-active-color;
+    }
+
+    &:active
+    {
+        color: $navlink-active-color;
+    }
+
+    color: $navlink-active-color;
+}
+
+.nav-logo
+{
+    margin-right: $navbar-spacing;
+}
+
+.nav > .nav-link
+{
+    padding: $navlink-padding-y $navlink-padding-x;
+    margin-right: $navbar-spacing*0.5;
+}

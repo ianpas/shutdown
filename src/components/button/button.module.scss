@@ -1,0 +1,63 @@
+//
+@import "../common/color";
+@import "../common/font";
+
+//
+$btn-border-radius:                 .25rem !default;
+$btn-border-width:                  1px !default;
+$btn-padding-y:                     .375rem !default;
+$btn-padding-x:                     .75rem !default;
+$btn-font-weight:                   400 !default;
+$btn-font-size:                     1rem !default;
+$btn-line-height:                   1.5 !default;
+
+$btn-focus-width:                   .2rem !default;
+$btn-focus-color:                   rgba($primary, .25) !default;
+$btn-focus-box-shadow:              0 0 0 $btn-focus-width $btn-focus-color !default;
+$btn-active-box-shadow:             inset 0 3px 5px rgba($black, .125) !default;
+
+//
+@import "mixin";
+
+//
+%btn
+{
+    //
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+
+    //
+    color: $body-color;
+    font-weight: $btn-font-weight;
+    font-family: $font-family-base;
+    
+    //
+    border: $btn-border-width solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+
+    //
+    &:not(:disabled)
+    {
+        cursor: pointer;
+    }
+}
+
+@each $color, $value in $theme-colors 
+{
+    .btn-#{$color} 
+    {
+        @extend %btn;
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color, $value in $theme-colors 
+{
+    .btn-outline-#{$color} 
+    {
+        @extend %btn;
+        @include button-outline-variant($value);
+    }
+}

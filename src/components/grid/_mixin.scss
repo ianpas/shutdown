@@ -1,0 +1,30 @@
+//
+$grid-columns:                  12 !default;
+
+//
+@mixin make-row 
+{
+    display: flex;
+}
+
+//
+@mixin make-col($size,$columns) 
+{
+    flex: 0 0 percentage($number: $size/$columns);
+}
+
+@mixin make-grid-columns($columns:$grid-columns) 
+{
+    .col
+    {
+        flex: 1;
+    }
+
+    @for $i from 1 through $columns
+    {
+        .col-#{$i}
+        {
+            @include make-col($i,$columns);
+        }
+    }
+}

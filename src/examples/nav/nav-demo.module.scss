@@ -1,0 +1,21 @@
+@import "../common/common.scss";
+
+.site-demo-container nav
+{
+    position: static;
+}
+
+// .site-demo-container a
+// {
+//     pointer-events: none;
+// }
+
+.site-code-container
+{
+    overflow-x: auto;
+}
+
+.site-code-container span
+{
+    white-space:nowrap;
+}
